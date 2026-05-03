@@ -12,3 +12,5 @@ scikit-learn==1.4.2
 
 # NLP Libraries
 nltk==3.8.1
+
+emoji
