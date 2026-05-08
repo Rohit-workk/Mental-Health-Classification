@@ -12,9 +12,13 @@ import emoji
 
 import nltk
 
-nltk.download('stopwords')
+try:
 
-from nltk.corpus import stopwords
+    nltk.data.find('corpora/stopwords')
+
+except LookupError:
+    nltk.download('stopwords')
+
 from sklearn.base import BaseEstimator, TransformerMixin
 
 # =========================
