@@ -12,12 +12,25 @@ import emoji
 
 import nltk
 
-try:
 
-    nltk.data.find('corpora/stopwords')
+@st.cache_resource
+def download_nltk():
 
-except LookupError:
-    nltk.download('stopwords')
+
+
+    try:
+        nltk.data.find('corpora/stopwords')
+
+    except LookupError:
+        nltk.download('stopwords')
+
+
+
+download_nltk()
+
+from nltk.corpus import stopwords
+
+
 
 from sklearn.base import BaseEstimator, TransformerMixin
 
