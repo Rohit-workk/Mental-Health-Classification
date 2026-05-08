@@ -10,6 +10,10 @@ import re
 import string
 import emoji
 
+import nltk
+
+nltk.download('stopwords')
+
 from nltk.corpus import stopwords
 from sklearn.base import BaseEstimator, TransformerMixin
 
